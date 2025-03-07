@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTA Tour Golf</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .home-title {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .home-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .home-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .home-link {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .home-link:hover {
+            background-color: #219653;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PTA Tour Golf</h1>
+        </header>
+        
+        <main>
+            <div class="home-container">
+                <h2 class="home-title">Welcome to PTA Tour Golf</h2>
+                <p class="home-description">
+                    Track and update golf scores for your friendly competitions. 
+                    Use the links below to navigate to different sections of the application.
+                </p>
+                
+                <div class="home-links">
+                    <a href="/scores" class="home-link">View & Update Scores</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 PTA Tour Golf</p>
+        </footer>
+    </div>
+</body>
+</html> 

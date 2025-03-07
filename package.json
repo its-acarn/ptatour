@@ -1,0 +1,31 @@
+{
+  "name": "ptatour",
+  "version": "1.0.0",
+  "description": "A web app to track golf scores between friends",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "ts-node src/ts/app.ts",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "dev:watch": "nodemon --watch src/ts --exec ts-node src/ts/app.ts",
+    "test": "npm test"
+  },
+  "keywords": [
+    "golf"
+  ],
+  "author": "its-acarn",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "googleapis": "^136.0.0",
+    "http": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}

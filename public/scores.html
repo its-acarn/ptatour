@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTA Tour Golf Scores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PTA Tour Golf Scores</h1>
+            <nav class="main-nav">
+                <button id="settings-toggle" class="icon-button" title="Settings">⚙️</button>
+            </nav>
+        </header>
+        
+        <div id="settings-panel" class="settings-panel hidden">
+            <h2>Settings</h2>
+            <form id="settings-form">
+                <div class="form-group">
+                    <label for="player1-name">Player 1 Name:</label>
+                    <input type="text" id="player1-name" name="player1-name" placeholder="Player 1">
+                </div>
+                <div class="form-group">
+                    <label for="player2-name">Player 2 Name:</label>
+                    <input type="text" id="player2-name" name="player2-name" placeholder="Player 2">
+                </div>
+                <div class="form-group">
+                    <label for="player3-name">Player 3 Name:</label>
+                    <input type="text" id="player3-name" name="player3-name" placeholder="Player 3">
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn">Save Settings</button>
+                    <button type="button" id="reset-scores-btn" class="btn danger-btn">Reset All Scores</button>
+                </div>
+            </form>
+        </div>
+        
+        <main>
+            <section class="scores-section">
+                <h2>Current Scores</h2>
+                <div class="scores-display">
+                    <div class="player">
+                        <h3 id="player1-name-display">Player 1</h3>
+                        <p id="player1-score">Loading...</p>
+                    </div>
+                    <div class="player">
+                        <h3 id="player2-name-display">Player 2</h3>
+                        <p id="player2-score">Loading...</p>
+                    </div>
+                    <div class="player">
+                        <h3 id="player3-name-display">Player 3</h3>
+                        <p id="player3-score">Loading...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="update-section">
+                <h2>Record Game Winner</h2>
+                <form id="winner-form">
+                    <div class="form-group">
+                        <label for="winner">Select Winner:</label>
+                        <select id="winner" name="winner" required>
+                            <option value="" disabled selected>-- Select Winner --</option>
+                            <option value="0" id="winner-option-0">Player 1</option>
+                            <option value="1" id="winner-option-1">Player 2</option>
+                            <option value="2" id="winner-option-2">Player 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="game-date">Game Date:</label>
+                        <input type="date" id="game-date" name="game-date" required>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Record Win</button>
+                </form>
+            </section>
+            
+            <section class="history-section">
+                <h2>Recent Games</h2>
+                <div class="history-container">
+                    <table id="game-history">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Winner</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Game history will be populated here -->
+                            <tr>
+                                <td colspan="3">Loading game history...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <div id="notification" class="notification hidden">
+            <p id="notification-message"></p>
+            <button id="notification-close">×</button>
+        </div>
+        
+        <div id="confirm-dialog" class="dialog hidden">
+            <div class="dialog-content">
+                <h3 id="confirm-title">Confirm Action</h3>
+                <p id="confirm-message">Are you sure you want to proceed?</p>
+                <div class="dialog-buttons">
+                    <button id="confirm-cancel" class="btn">Cancel</button>
+                    <button id="confirm-ok" class="btn danger-btn">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 PTA Tour Golf</p>
+        </footer>
+    </div>
+
+    <script src="scores.js"></script>
+</body>
+</html> 
